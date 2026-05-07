@@ -25,13 +25,17 @@ class Random_Game:
         for record in self.records:
           print(f"the last winner was {record['winner']} in {record['attempts']} with {record['difficulty']} difficulty and in {record['seconds']}")
     def choose_difficulty(self):
+     while True:
       difficulty = input("Choose a difficult \neasy \nmedium \nhard \n").lower()
       if difficulty == "easy":
         return self.difficulties[difficulty]
+        break
       elif difficulty == "medium":
         return self.difficulties[difficulty]
+        break
       elif difficulty == "hard":
         return self.difficulties[difficulty]
+        break
       else:
         print("valor incorrecto")
     def get_players(self):
