@@ -30,6 +30,7 @@ class Contact_Agenda:
              print(f" name : {contact['name']} phone : {contact['phone']} , email:  {contact['email']} , {contact['time']} ")
     def search(self):
        name = input("Write contact name").lower()
+       found = False
        for contact in self.contacts:
           if contact['name'].lower() ==  name.lower():
              print(f" name : {contact['name']} phone : {contact['phone']} , email:  {contact['email']} , {contact['time']}")
@@ -39,6 +40,7 @@ class Contact_Agenda:
              print("contact not found")
     def delete(self):
         name = input("write contact name to delete").lower()
+        found = False
         for contact in self.contacts:
            if contact['name'].lower() == name.lower():
              self.contacts.remove(contact)
