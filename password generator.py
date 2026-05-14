@@ -72,7 +72,7 @@ class PasswordGenerator:
              print(f"password {password['password']} deleted sucessfully")
              found = True
              break
-          if not found:
+       if not found:
              print("not found")
 gen = PasswordGenerator()
 
